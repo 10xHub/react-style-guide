@@ -61,10 +61,10 @@ Use specific keywords before file extensions to categorize files:
 
 ```javascript
 // React Components
-UserProfile.component.jsx
-NavigationMenu.component.jsx
-ProductCard.component.jsx
-AuthLoginForm.component.jsx
+UserProfile.jsx
+NavigationMenu.jsx
+ProductCard.jsx
+AuthLoginForm.jsx
 
 // Custom Hooks
 useUserData.hook.js
