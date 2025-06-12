@@ -594,7 +594,7 @@ const useAdvancedDebounce = (value, delay) => {
 };
 
 // Usage
-const SearchComponent = () => {
+const Search = () => {
   const [query, setQuery] = useState('');
   const debouncedQuery = useDebounce(query, 300);
   const [results, setResults] = useState([]);
@@ -1198,7 +1198,7 @@ const RegistrationForm = () => {
     }
   };
   
-  const CurrentStepComponent = multiStepForm.currentStepData;
+  const CurrentStep = multiStepForm.currentStepData;
   
   return (
     <div className="multi-step-form">
@@ -1225,7 +1225,7 @@ const RegistrationForm = () => {
         ))}
       </div>
       
-      <CurrentStepComponent
+      <CurrentStep
         data={multiStepForm.formData}
         onSubmit={handleStepSubmit}
         onPrevious={multiStepForm.previousStep}
@@ -1421,7 +1421,7 @@ const useResource = (resourceFactory, dependencies = []) => {
 };
 
 // Usage
-const WebSocketComponent = () => {
+const WebSocket = () => {
   const ws = useResource(() => {
     const socket = new WebSocket('ws://localhost:8080');
     
