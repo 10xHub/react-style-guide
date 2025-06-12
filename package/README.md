@@ -4,7 +4,7 @@ A shareable ESLint configuration for React projects, designed to enforce consist
 
 ## Installation
 
-Install the package and all required peer dependencies:
+Install the package:
 
 ```sh
 # Using npm
@@ -15,6 +15,19 @@ yarn add --dev @10xscale/eslint-modern
 
 # Using pnpm
 pnpm add -D @10xscale/eslint-modern
+```
+
+Install the package and all required peer dependencies:
+
+```sh
+# Using npm
+npm install --save-dev @10xscale/eslint-modern @babel/eslint-parser @eslint/eslintrc @eslint/js eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-sonarjs eslint-plugin-unicorn
+
+# Using yarn
+yarn add --dev @10xscale/eslint-modern @babel/eslint-parser @eslint/eslintrc @eslint/js eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-sonarjs eslint-plugin-unicorn
+
+# Using pnpm
+pnpm add -D @10xscale/eslint-modern @babel/eslint-parser @eslint/eslintrc @eslint/js eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-sonarjs eslint-plugin-unicorn
 ```
 
 > **Note:** You must also install all listed peer dependencies. Check the `peerDependencies` section in [`package.json`](./package.json) for the required versions.
