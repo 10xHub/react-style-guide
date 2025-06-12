@@ -1,0 +1,40 @@
+{
+  "name": "@10xScale/eslint-config",
+  "version": "1.0.0",
+  "description": "Modern React & JavaScript ESLint config (ESLint v9+ Flat Config) by 10xScale.",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/10xScale/eslint-config"
+  },
+  "author": "10xScale",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "eslint-config",
+    "react",
+    "javascript",
+    "flat config",
+    "prettier",
+    "unicorn",
+    "sonarjs",
+    "import",
+    "jsx-a11y",
+    "promise",
+    "config"
+  ],
+  "peerDependencies": {
+    "@babel/eslint-parser": "^7.0.0",
+    "@eslint/eslintrc": "^3.0.0",
+    "@eslint/js": "^9.0.0",
+    "eslint-plugin-import": "^2.0.0",
+    "eslint-plugin-jsx-a11y": "^6.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.0.0",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "eslint-plugin-sonarjs": "^0.22.0",
+    "eslint-plugin-unicorn": "^50.0.0"
+  }
+}

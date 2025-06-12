@@ -1,0 +1,44 @@
+# @10xScale/eslint-config
+
+A shareable ESLint configuration for React projects, designed to enforce consistent code style and best practices across your codebase. Built for use with ESLint v9+ Flat Config.
+
+## Installation
+
+Install the package and all required peer dependencies:
+
+```sh
+# Using npm
+npm install --save-dev @10xScale/eslint-config
+
+# Using yarn
+yarn add --dev @10xScale/eslint-config
+
+# Using pnpm
+pnpm add -D @10xScale/eslint-config
+```
+
+> **Note:** You must also install all listed peer dependencies. Check the `peerDependencies` section in [`package.json`](./package.json) for the required versions.
+
+## Usage (ESLint v9+ Flat Config)
+
+Create an `eslint.config.js` file in your project root and extend this config:
+
+```js
+// eslint.config.js
+import config from '@10xScale/eslint-config/react';
+
+export default [
+  ...config,
+  // Add your custom rules or overrides here
+];
+```
+
+## Updating Peer Dependencies
+
+When updating this package, always ensure your project's peer dependencies match the versions specified in [`package.json`](./package.json). Update them as needed to avoid version conflicts.
+
+## Contributing & Contact
+
+Contributions, issues, and suggestions are welcome! Please open an issue or pull request on the repository.
+
+For questions or support, contact the maintainers via the repository's issue tracker.
