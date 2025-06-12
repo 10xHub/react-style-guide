@@ -228,7 +228,7 @@ export default [
                     cases: { camelCase: true, pascalCase: true },
                     ignore: [
                         /^[A-Z]+\..*$/, // Allow README.md, LICENSE, etc.
-                        /.*\.component\.jsx?$/,
+                        /.*\\.jsx?$/,
                         /.*\.hook\.js$/,
                         /.*\.api\.js$/,
                         /.*\.query\.js$/,

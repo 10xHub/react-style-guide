@@ -9,7 +9,7 @@ This summary distills the core rules and patterns from all project guidelines an
 - **Functional Components Only:** Use functional components and React hooks. Do not use class components.
 - **Single Responsibility:** Each component, hook, or module should do one thing only.
 - **Naming:** Use PascalCase for components, camelCase for variables/functions, SCREAMING_SNAKE_CASE for constants, and kebab-case for files/folders.
-- **File Naming:** Use suffixes like `.component.jsx`, `.hook.js`, `.util.js`, `.api.js`, `.slice.js`, `.test.js` for clarity.
+- **File Naming:** Use suffixes like `.jsx`, `.hook.js`, `.util.js`, `.api.js`, `.slice.js`, `.test.js` for clarity.
 
 ## 2. File & Project Structure
 

@@ -97,9 +97,9 @@ const useLocalStorage = () => { /* ... */ };
 
 ```
 // Component files
-UserProfile.component.jsx
-NavigationMenu.component.jsx
-ProductCard.component.jsx
+UserProfile.jsx
+NavigationMenu.jsx
+ProductCard.jsx
 
 // Hook files
 useUserData.hook.js
@@ -1119,9 +1119,9 @@ const DataVisualization = ({ data, filters }) => {
 import { lazy, Suspense } from 'react';
 
 // Lazy load heavy components
-const Dashboard = lazy(() => import('./Dashboard.component'));
-const UserProfile = lazy(() => import('./UserProfile.component'));
-const AdminPanel = lazy(() => import('./AdminPanel.component'));
+const Dashboard = lazy(() => import('./Dashboard'));
+const UserProfile = lazy(() => import('./UserProfile'));
+const AdminPanel = lazy(() => import('./AdminPanel'));
 
 // Component with lazy loading
 const App = () => {
@@ -1188,7 +1188,7 @@ const NavigationLink = ({ to, children, preload }) => {
 // Usage
 <NavigationLink 
   to="/dashboard" 
-  preload={() => import('./Dashboard.component')}
+  preload={() => import('./Dashboard')}
 >
   Dashboard
 </NavigationLink>
@@ -1336,7 +1336,7 @@ class ErrorBoundary extends Component {
           <details style={{ whiteSpace: 'pre-wrap' }}>
             {this.state.error && this.state.error.toString()}
             <br />
-            {this.state.errorInfo.componentStack}
+            {this.state.errorInfoStack}
           </details>
           <button onClick={() => window.location.reload()}>
             Reload Page
@@ -1384,7 +1384,7 @@ const App = () => (
 // UserCard.test.jsx
 import { render, screen, fireEvent } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
-import UserCard from './UserCard.component';
+import UserCard from './UserCard';
 
 const mockUser = {
   id: '1',

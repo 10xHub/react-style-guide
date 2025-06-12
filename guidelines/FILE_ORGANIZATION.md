@@ -130,39 +130,39 @@ order-management/
 ```
 src/components/
 ├── ui/                        # Base UI components (ShadCN/UI)
-│   ├── Button.component.jsx
-│   ├── Input.component.jsx
-│   ├── Card.component.jsx
-│   ├── Modal.component.jsx
+│   ├── Button.jsx
+│   ├── Input.jsx
+│   ├── Card.jsx
+│   ├── Modal.jsx
 │   └── index.js              # Barrel exports
 ├── layout/                   # Layout components
-│   ├── Header.component.jsx
-│   ├── Sidebar.component.jsx
-│   ├── Footer.component.jsx
-│   ├── MainLayout.component.jsx
+│   ├── Header.jsx
+│   ├── Sidebar.jsx
+│   ├── Footer.jsx
+│   ├── MainLayout.jsx
 │   └── index.js
 ├── forms/                    # Form-related components
-│   ├── UserForm.component.jsx
-│   ├── LoginForm.component.jsx
-│   ├── ContactForm.component.jsx
+│   ├── UserForm.jsx
+│   ├── LoginForm.jsx
+│   ├── ContactForm.jsx
 │   └── index.js
 ├── features/                 # Feature-specific components
 │   ├── auth/
-│   │   ├── LoginButton.component.jsx
-│   │   ├── AuthGuard.component.jsx
+│   │   ├── LoginButton.jsx
+│   │   ├── AuthGuard.jsx
 │   │   └── index.js
 │   ├── dashboard/
-│   │   ├── StatsWidget.component.jsx
-│   │   ├── RecentActivity.component.jsx
+│   │   ├── StatsWidget.jsx
+│   │   ├── RecentActivity.jsx
 │   │   └── index.js
 │   └── user-profile/
-│       ├── ProfileCard.component.jsx
-│       ├── AvatarUpload.component.jsx
+│       ├── ProfileCard.jsx
+│       ├── AvatarUpload.jsx
 │       └── index.js
 └── common/                   # Commonly used components
-    ├── LoadingSpinner.component.jsx
-    ├── ErrorBoundary.component.jsx
-    ├── NotFound.component.jsx
+    ├── LoadingSpinner.jsx
+    ├── ErrorBoundary.jsx
+    ├── NotFound.jsx
     └── index.js
 ```
 
@@ -214,26 +214,26 @@ src/lib/
 ```
 src/pages/
 ├── auth/                    # Authentication pages
-│   ├── Login.component.jsx
-│   ├── Register.component.jsx
-│   ├── ForgotPassword.component.jsx
-│   ├── ResetPassword.component.jsx
+│   ├── Login.jsx
+│   ├── Register.jsx
+│   ├── ForgotPassword.jsx
+│   ├── ResetPassword.jsx
 │   └── index.js
 ├── dashboard/               # Dashboard pages
-│   ├── Dashboard.component.jsx
-│   ├── Analytics.component.jsx
-│   ├── Reports.component.jsx
+│   ├── Dashboard.jsx
+│   ├── Analytics.jsx
+│   ├── Reports.jsx
 │   └── index.js
 ├── user-profile/           # User profile pages
-│   ├── Profile.component.jsx
-│   ├── Settings.component.jsx
-│   ├── Preferences.component.jsx
+│   ├── Profile.jsx
+│   ├── Settings.jsx
+│   ├── Preferences.jsx
 │   └── index.js
 ├── misc/                   # Miscellaneous pages
-│   ├── NotFound.component.jsx
-│   ├── Unauthorized.component.jsx
-│   ├── ServerError.component.jsx
-│   ├── Maintenance.component.jsx
+│   ├── NotFound.jsx
+│   ├── Unauthorized.jsx
+│   ├── ServerError.jsx
+│   ├── Maintenance.jsx
 │   └── index.js
 └── index.js                # All page exports
 ```
@@ -276,7 +276,7 @@ src/services/
 ### Single Component File Structure
 
 ```jsx
-// UserProfile.component.jsx
+// UserProfile.jsx
 
 // 1. External imports
 import React, { useState, useEffect, useCallback } from 'react';
@@ -398,10 +398,10 @@ export default UserProfile;
 ```
 src/components/features/user-management/
 ├── components/              # Feature-specific components
-│   ├── UserList.component.jsx
-│   ├── UserCard.component.jsx
-│   ├── UserForm.component.jsx
-│   ├── UserFilters.component.jsx
+│   ├── UserList.jsx
+│   ├── UserCard.jsx
+│   ├── UserForm.jsx
+│   ├── UserFilters.jsx
 │   └── index.js
 ├── hooks/                  # Feature-specific hooks
 │   ├── useUserManagement.hook.js
@@ -753,11 +753,11 @@ export const getIconUrl = (iconName) => {
 
 ```javascript
 // src/components/ui/index.js
-export { default as Button } from './Button.component';
-export { default as Input } from './Input.component';
-export { default as Card } from './Card.component';
-export { default as Modal } from './Modal.component';
-export { default as Avatar } from './Avatar.component';
+export { default as Button } from './Button';
+export { default as Input } from './Input';
+export { default as Card } from './Card';
+export { default as Modal } from './Modal';
+export { default as Avatar } from './Avatar';
 
 // src/lib/hooks/index.js
 // Data hooks
@@ -818,13 +818,13 @@ import { useUserQuery } from '../../services/query';
 import { lazy } from 'react';
 
 // Lazy load page components
-const Dashboard = lazy(() => import('../pages/dashboard/Dashboard.component'));
-const UserProfile = lazy(() => import('../pages/user-profile/Profile.component'));
-const Settings = lazy(() => import('../pages/user-profile/Settings.component'));
+const Dashboard = lazy(() => import('../pages/dashboard/Dashboard'));
+const UserProfile = lazy(() => import('../pages/user-profile/Profile'));
+const Settings = lazy(() => import('../pages/user-profile/Settings'));
 
 // Admin pages with longer loading
 const AdminPanel = lazy(() => 
-  import('../pages/admin/AdminPanel.component').then(module => ({
+  import('../pages/admin/AdminPanel').then(module => ({
     default: module.AdminPanel
   }))
 );
@@ -833,22 +833,22 @@ export const mainRoutes = [
   {
     path: '/dashboard',
     element: <Dashboard />,
-    preload: () => import('../pages/dashboard/Dashboard.component')
+    preload: () => import('../pages/dashboard/Dashboard')
   },
   {
     path: '/profile',
     element: <UserProfile />,
-    preload: () => import('../pages/user-profile/Profile.component')
+    preload: () => import('../pages/user-profile/Profile')
   },
   {
     path: '/settings',
     element: <Settings />,
-    preload: () => import('../pages/user-profile/Settings.component')
+    preload: () => import('../pages/user-profile/Settings')
   },
   {
     path: '/admin',
     element: <AdminPanel />,
-    preload: () => import('../pages/admin/AdminPanel.component')
+    preload: () => import('../pages/admin/AdminPanel')
   }
 ];
 ```

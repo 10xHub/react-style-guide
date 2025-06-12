@@ -189,7 +189,7 @@ const useUserData = (userId) => {
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, it, expect, vi } from 'vitest';
-import UserCard from './UserCard.component';
+import UserCard from './UserCard';
 
 describe('UserCard', () => {
   const mockUser = {
@@ -282,11 +282,11 @@ npm install --save-dev size-limit
 ### Code Splitting Examples
 ```javascript
 // Route-based splitting
-const Dashboard = lazy(() => import('./pages/Dashboard.component'));
-const UserProfile = lazy(() => import('./pages/UserProfile.component'));
+const Dashboard = lazy(() => import('./pages/Dashboard'));
+const UserProfile = lazy(() => import('./pages/UserProfile'));
 
 // Feature-based splitting
-const AdminPanel = lazy(() => import('./features/admin/AdminPanel.component'));
+const AdminPanel = lazy(() => import('./features/admin/AdminPanel'));
 ```
 
 ### Performance Monitoring

@@ -86,13 +86,13 @@ export const adminApi = {
 **Derived modules/components should be substitutable for their base.**
 
 ```javascript
-// src/components/buttons/BaseButton.component.jsx
+// src/components/buttons/BaseButton.jsx
 export const BaseButton = ({ children, ...props }) => (
   <button {...props}>{children}</button>
 );
 
-// src/components/buttons/PrimaryButton.component.jsx
-import { BaseButton } from './BaseButton.component';
+// src/components/buttons/PrimaryButton.jsx
+import { BaseButton } from './BaseButton';
 
 export const PrimaryButton = (props) => (
   <BaseButton {...props} style={{ background: 'blue', color: 'white' }} />
@@ -108,7 +108,7 @@ export const PrimaryButton = (props) => (
 **Clients should not be forced to depend on unused props or API.**
 
 ```javascript
-// src/components/user/UserDisplay.component.jsx
+// src/components/user/UserDisplay.jsx
 export const UserDisplay = ({ user }) => (
   <div>
     <h2>{user.name}</h2>
@@ -116,7 +116,7 @@ export const UserDisplay = ({ user }) => (
   </div>
 );
 
-// src/components/user/UserActions.component.jsx
+// src/components/user/UserActions.jsx
 export const UserActions = ({ onEdit, onDelete }) => (
   <div>
     <button onClick={onEdit}>Edit</button>
@@ -124,9 +124,9 @@ export const UserActions = ({ onEdit, onDelete }) => (
   </div>
 );
 
-// src/components/user/UserCard.component.jsx
-import { UserDisplay } from './UserDisplay.component';
-import { UserActions } from './UserActions.component';
+// src/components/user/UserCard.jsx
+import { UserDisplay } from './UserDisplay';
+import { UserActions } from './UserActions';
 
 export const UserCard = ({ user, onEdit, onDelete }) => (
   <div>
@@ -154,7 +154,7 @@ import { useMemo } from 'react';
 
 export const useUserService = (api = userApi) => useMemo(() => api, [api]);
 
-// src/components/user/UserProfile.component.jsx
+// src/components/user/UserProfile.jsx
 import { useUserQuery, useUpdateUserMutation } from '../../services/query/user.query';
 import { useUserService } from '../../hooks/useUserService.hook';
 
@@ -185,7 +185,7 @@ export const UserProfile = ({ userId, userApiOverride }) => {
 import { useSelector, useDispatch } from 'react-redux';
 import { useUserQuery, useUpdateUserMutation } from '../../services/query/user.query';
 import { startEdit, stopEdit } from '../../services/store/user.slice';
-import { UserCard } from '../../components/user/UserCard.component';
+import { UserCard } from '../../components/user/UserCard';
 
 export const UserProfileFeature = ({ userId }) => {
   const { data: user, isLoading } = useUserQuery(userId);

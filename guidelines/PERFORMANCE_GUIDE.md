@@ -412,13 +412,13 @@ import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 // Lazy load page components
-const Dashboard = lazy(() => import('../pages/Dashboard.component'));
-const UserProfile = lazy(() => import('../pages/UserProfile.component'));
-const Settings = lazy(() => import('../pages/Settings.component'));
+const Dashboard = lazy(() => import('../pages/Dashboard'));
+const UserProfile = lazy(() => import('../pages/UserProfile'));
+const Settings = lazy(() => import('../pages/Settings'));
 
 // Admin pages - separate chunk
 const AdminPanel = lazy(() => 
-  import('../pages/admin/AdminPanel.component')
+  import('../pages/admin/AdminPanel')
 );
 
 const App = () => (
@@ -450,7 +450,7 @@ const NavigationLink = ({ to, children, preload }) => {
 // Usage
 <NavigationLink 
   to="/admin" 
-  preload={() => import('../pages/admin/AdminPanel.component')}
+  preload={() => import('../pages/admin/AdminPanel')}
 >
   Admin Panel
 </NavigationLink>
@@ -461,15 +461,15 @@ const NavigationLink = ({ to, children, preload }) => {
 ```jsx
 // ✅ Split heavy features
 const DataVisualization = lazy(() => 
-  import('../features/analytics/DataVisualization.component')
+  import('../features/analytics/DataVisualization')
 );
 
 const ReportGenerator = lazy(() => 
-  import('../features/reports/ReportGenerator.component')
+  import('../features/reports/ReportGenerator')
 );
 
 const VideoPlayer = lazy(() => 
-  import('../features/media/VideoPlayer.component')
+  import('../features/media/VideoPlayer')
 );
 
 // ✅ Conditional loading

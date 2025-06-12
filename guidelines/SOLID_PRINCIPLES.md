@@ -526,8 +526,8 @@ const Form = ({ children, onSubmit, validation, plugins = [] }) => {
       {children}
       {/* Render plugin components */}
       {plugins.map((plugin, index) => (
-        plugin.Component ? (
-          <plugin.Component 
+        plugin ? (
+          <plugin 
             key={index}
             formData={enhancedFormData}
             setFormData={setFormData}

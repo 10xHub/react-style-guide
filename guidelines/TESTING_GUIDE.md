@@ -39,7 +39,7 @@
 ```
 src/
 ├── components/
-│   ├── UserCard.component.jsx
+│   ├── UserCard.jsx
 │   ├── UserCard.test.jsx           # Component tests
 │   └── UserCard.stories.jsx        # Storybook stories
 ├── lib/hooks/
@@ -221,7 +221,7 @@ export const handlers = [
 // UserCard.test.jsx
 import { render, screen, fireEvent } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
-import UserCard from './UserCard.component';
+import UserCard from './UserCard';
 
 const mockUser = {
   id: '1',
@@ -284,7 +284,7 @@ describe('UserCard', () => {
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, it, expect, vi } from 'vitest';
-import LoginForm from './LoginForm.component';
+import LoginForm from './LoginForm';
 
 describe('LoginForm', () => {
   it('submits form with correct data', async () => {
@@ -349,7 +349,7 @@ describe('LoginForm', () => {
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import { AuthContext } from '../../lib/context/AuthContext';
-import UserProfile from './UserProfile.component';
+import UserProfile from './UserProfile';
 
 const renderWithAuth = (component, authValue) => {
   return render(
@@ -628,7 +628,7 @@ import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { describe, it, expect } from 'vitest';
-import UserDashboard from './UserDashboard.component';
+import UserDashboard from './UserDashboard';
 
 const renderWithProviders = (component, { route = '/' } = {}) => {
   const queryClient = new QueryClient({
@@ -850,7 +850,7 @@ vi.mock('../../services/api/user.api', () => ({
 
 ```javascript
 // Mock heavy components
-vi.mock('../components/HeavyChart.component', () => ({
+vi.mock('../components/HeavyChart', () => ({
   default: ({ data }) => <div data-testid="mock-chart">Chart with {data.length} items</div>
 }));
 

@@ -1198,7 +1198,7 @@ const RegistrationForm = () => {
     }
   };
   
-  const CurrentStepComponent = multiStepForm.currentStepData.component;
+  const CurrentStepComponent = multiStepForm.currentStepData;
   
   return (
     <div className="multi-step-form">

@@ -121,7 +121,7 @@ function createUserManager(config) {
 // File names
 user-service.js
 api-client.js
-user-profile.component.jsx
+user-profile.jsx
 auth-utils.js
 
 // Directory names
