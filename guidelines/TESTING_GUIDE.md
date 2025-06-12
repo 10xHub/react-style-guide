@@ -2,6 +2,25 @@
 
 > Comprehensive testing patterns with Vitest, React Testing Library, and modern testing practices
 
+---
+
+## Automated Linting & Test File Naming
+
+Test file naming, structure, and many best practices in this guide are enforced by the organization-wide ESLint config [`@10xscale/eslint-modern`](https://www.npmjs.com/package/@10xscale/eslint-modern).
+
+**To use this config in your project:**
+
+```js
+// eslint.config.js (ESLint v9+ Flat Config)
+import config from '@10xscale/eslint-modern'
+export default config
+```
+
+- Test file naming conventions (e.g., `.test.js`, `.test.jsx`), import order, and code style are enforced automatically by ESLint.
+- For details on the rules, see the [config source](https://www.npmjs.com/package/@10xscale/eslint-modern) or [`package/index.js`](package/index.js:1).
+
+---
+
 ## Table of Contents
 
 1. [Testing Philosophy](#testing-philosophy)

@@ -2,6 +2,25 @@
 
 > Modern React 19+ patterns, functional components, and best practices with JavaScript examples
 
+---
+
+## Automated Linting & Style Enforcement
+
+This guide is enforced by the organization-wide ESLint config [`@10xscale/eslint-modern`](https://www.npmjs.com/package/@10xscale/eslint-modern), which covers all React, JSX, and hooks rules described here.
+
+**To use this config in your project:**
+
+```js
+// eslint.config.js (ESLint v9+ Flat Config)
+import config from '@10xscale/eslint-modern'
+export default config
+```
+
+- All React/JSX naming, file naming, hooks, and best practices in this guide are enforced automatically by ESLint.
+- For details on the rules, see the [config source](https://www.npmjs.com/package/@10xscale/eslint-modern) or [`package/index.js`](package/index.js:1).
+
+---
+
 ## Table of Contents
 
 1. [Component Fundamentals](#component-fundamentals)
