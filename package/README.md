@@ -34,17 +34,31 @@ pnpm add -D @10xscale/eslint-modern @babel/eslint-parser @eslint/eslintrc @eslin
 
 ## Usage (ESLint v9+ Flat Config)
 
-Create an `eslint.config.js` file in your project root and extend this config:
+> **Important:** This config is published as an ES module. You must set "type": "module" in your project's `package.json` to use it, or use the `.mjs` extension for your ESLint config file.
+
+### 1. Enable ES Modules in your project
+
+Add this to your `package.json`:
+
+```json
+{
+  "type": "module"
+}
+```
+
+### 2. Create an `eslint.config.js` (or `.mjs`) file in your project root:
 
 ```js
 // eslint.config.js
-import config from '@10xScale/eslint-config/react';
+import config from '@10xscale/eslint-modern';
 
 export default [
   ...config,
   // Add your custom rules or overrides here
 ];
 ```
+
+If you cannot use `type: "module"`, rename your config to `eslint.config.mjs` and use the same import/export syntax.
 
 ## Updating Peer Dependencies
 

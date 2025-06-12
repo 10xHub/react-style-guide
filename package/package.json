@@ -1,6 +1,6 @@
 {
   "name": "@10xscale/eslint-modern",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Modern React & JavaScript ESLint config (ESLint v9+ Flat Config) by 10xScale.",
   "main": "index.js",
   "license": "MIT",

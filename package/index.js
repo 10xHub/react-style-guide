@@ -17,8 +17,6 @@ import reactPlugin from "eslint-plugin-react"
 import reactHooksPlugin from "eslint-plugin-react-hooks"
 import sonarjsPlugin from "eslint-plugin-sonarjs"
 import unicornPlugin from "eslint-plugin-unicorn"
-// import vitestPlugin from "eslint-plugin-vitest";
-// import securityPlugin from "eslint-plugin-security";
 
 const require = createRequire(import.meta.url)
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
