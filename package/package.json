@@ -1,14 +1,17 @@
 {
-  "name": "@10xScale/eslint-config",
-  "version": "1.0.0",
+  "name": "@10xscale/eslint-modern",
+  "version": "0.0.1",
   "description": "Modern React & JavaScript ESLint config (ESLint v9+ Flat Config) by 10xScale.",
   "main": "index.js",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/10xScale/eslint-config"
+    "url": "https://github.com/10XScale-in/react-style-guide"
   },
-  "author": "10xScale",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "10XScale",
   "keywords": [
     "eslint",
     "eslintconfig",
@@ -31,10 +34,10 @@
     "eslint-plugin-import": "^2.0.0",
     "eslint-plugin-jsx-a11y": "^6.0.0",
     "eslint-plugin-prettier": "^5.0.0",
-    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-promise": "^7.0.0",
     "eslint-plugin-react": "^7.0.0",
-    "eslint-plugin-react-hooks": "^4.0.0",
-    "eslint-plugin-sonarjs": "^0.22.0",
-    "eslint-plugin-unicorn": "^50.0.0"
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-sonarjs": "^3.0.0",
+    "eslint-plugin-unicorn": "^59.0.0"
   }
 }

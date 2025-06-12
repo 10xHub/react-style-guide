@@ -8,13 +8,13 @@ Install the package and all required peer dependencies:
 
 ```sh
 # Using npm
-npm install --save-dev @10xScale/eslint-config
+npm install --save-dev @10xscale/eslint-modern
 
 # Using yarn
-yarn add --dev @10xScale/eslint-config
+yarn add --dev @10xscale/eslint-modern
 
 # Using pnpm
-pnpm add -D @10xScale/eslint-config
+pnpm add -D @10xscale/eslint-modern
 ```
 
 > **Note:** You must also install all listed peer dependencies. Check the `peerDependencies` section in [`package.json`](./package.json) for the required versions.
