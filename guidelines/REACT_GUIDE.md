@@ -922,22 +922,22 @@ const DebouncedSearch = () => {
 
 ```jsx
 // HOC for loading states
-const withLoading = (WrappedComponent) => {
-  const WithLoadingComponent = (props) => {
+const withLoading = (Wrapped) => {
+  const withLoading = (props) => {
     if (props.loading) {
       return <LoadingSpinner />;
     }
     
-    return <WrappedComponent {...props} />;
+    return <Wrapped {...props} />;
   };
   
-  WithLoadingComponent.displayName = `withLoading(${WrappedComponent.displayName || WrappedComponent.name})`;
+  withLoading.displayName = `withLoading(${Wrapped.displayName || Wrapped.name})`;
   
-  return WithLoadingComponent;
+  return withLoading;
 };
 
 // HOC for error handling
-const withErrorBoundary = (WrappedComponent, ErrorComponent = DefaultErrorComponent) => {
+const withErrorBoundary = (Wrapped, ErrorComponent = DefaultErrorComponent) => {
   class WithErrorBoundary extends Component {
     constructor(props) {
       super(props);
@@ -957,11 +957,11 @@ const withErrorBoundary = (WrappedComponent, ErrorComponent = DefaultErrorCompon
         return <ErrorComponent error={this.state.error} />;
       }
       
-      return <WrappedComponent {...this.props} />;
+      return <Wrapped {...this.props} />;
     }
   }
   
-  WithErrorBoundary.displayName = `withErrorBoundary(${WrappedComponent.displayName || WrappedComponent.name})`;
+  WithErrorBoundary.displayName = `withErrorBoundary(${Wrapped.displayName || Wrapped.name})`;
   
   return WithErrorBoundary;
 };
@@ -1370,15 +1370,15 @@ class ErrorBoundary extends Component {
 
 // Error boundary wrapper HOC
 const withErrorBoundary = (Component, ErrorComponent) => {
-  const WrappedComponent = (props) => (
+  const Wrapped = (props) => (
     <ErrorBoundary fallback={ErrorComponent}>
       <Component {...props} />
     </ErrorBoundary>
   );
   
-  WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
+  Wrapped.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
   
-  return WrappedComponent;
+  return Wrapped;
 };
 
 // Usage
