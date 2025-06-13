@@ -1,6 +1,5 @@
 // @10xScale/eslint-config: Modern React & JavaScript ESLint config (ESLint v9+ Flat Config)
 
-import { createRequire } from "node:module"
 import path from "node:path"
 import { fileURLToPath } from "node:url"
 
@@ -18,7 +17,6 @@ import reactHooksPlugin from "eslint-plugin-react-hooks"
 import sonarjsPlugin from "eslint-plugin-sonarjs"
 import unicornPlugin from "eslint-plugin-unicorn"
 
-const require = createRequire(import.meta.url)
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 // Setup compat for legacy configs if needed
