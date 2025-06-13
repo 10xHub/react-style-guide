@@ -10,6 +10,8 @@ Install the package:
 # Using npm
 npm install --save-dev @10xscale/eslint-modern
 
+npm install --save-dev eslint-import-resolver-alias
+
 # Using yarn
 yarn add --dev @10xscale/eslint-modern
 
@@ -21,13 +23,14 @@ Install the package and all required peer dependencies:
 
 ```sh
 # Using npm
-npm install --save-dev @10xscale/eslint-modern @babel/eslint-parser @eslint/eslintrc @eslint/js eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-sonarjs eslint-plugin-unicorn
+npm install --save-dev @10xscale/eslint-modern @babel/eslint-parser @eslint/eslintrc @eslint/js eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-sonarjs eslint-plugin-unicorn eslint-import-resolver-alias eslint-plugin-jsdoc
 
 # Using yarn
-yarn add --dev @10xscale/eslint-modern @babel/eslint-parser @eslint/eslintrc @eslint/js eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-sonarjs eslint-plugin-unicorn
+yarn add --dev @10xscale/eslint-modern @babel/eslint-parser @eslint/eslintrc @eslint/js eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-sonarjs eslint-plugin-unicorn eslint-import-resolver-alias eslint-plugin-jsdoc
+
 
 # Using pnpm
-pnpm add -D @10xscale/eslint-modern @babel/eslint-parser @eslint/eslintrc @eslint/js eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-sonarjs eslint-plugin-unicorn
+pnpm add -D @10xscale/eslint-modern @babel/eslint-parser @eslint/eslintrc @eslint/js eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-sonarjs eslint-plugin-unicorn eslint-import-resolver-alias eslint-plugin-jsdoc
 ```
 
 > **Note:** You must also install all listed peer dependencies. Check the `peerDependencies` section in [`package.json`](./package.json) for the required versions.
