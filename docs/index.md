@@ -4,19 +4,23 @@
 
 ## 🚀 Overview
 
-This repository contains a complete set of development guides for modern React applications, focusing on JavaScript patterns, performance optimization, ## 🎯 Migration Path
+This repository contains a complete set of development guides for modern React applications, focusing on JavaScript patterns, performance optimization:
+1. **Install ESLint Package** - Use the published [@10xscale/eslint-modern](https://www.npmjs.com/package/@10xscale/eslint-modern) package
+2. **Convert Class Components** - Migrate to functional components with hooks
+3. **Modernize Patterns** - Apply [React Guide](./guidelines/REACT_GUIDE.md) patterns
+4. **Optimize Performance** - Implement [Performance Guide](./guidelines/PERFORMANCE_GUIDE.md) techniques
 
 ### From Airbnb Configuration
 1. **Install ESLint Package** - Use the published [@10xscale/eslint-modern](https://www.npmjs.com/package/@10xscale/eslint-modern) package
 2. **Convert Class Components** - Migrate to functional components with hooks
-3. **Modernize Patterns** - Apply [React Guide](./REACT_GUIDE.md) patterns
-4. **Optimize Performance** - Implement [Performance Guide](./PERFORMANCE_GUIDE.md) techniques
+3. **Modernize Patterns** - Apply [React Guide](./guidelines/REACT_GUIDE.md) patterns
+4. **Optimize Performance** - Implement [Performance Guide](./guidelines/PERFORMANCE_GUIDE.md) techniques
 
 ### From Create React App
 1. **Migrate to Vite** - Switch to Vite for faster builds and development
 2. **Update Testing** - Switch from Jest to Vitest
-3. **Reorganize Structure** - Apply [File Organization Guide](./FILE_ORGANIZATION.md)
-4. **Optimize Bundle** - Implement code splitting and optimizationble code architecture. Built for teams transitioning from traditional setups to modern React development.
+3. **Reorganize Structure** - Apply [File Organization Guide](./guidelines/FILE_ORGANIZATION.md)
+4. **Optimize Bundle** - Implement code splitting and optimization techniques for better performance.
 
 ## 📦 ESLint Configuration Package
 
@@ -24,7 +28,7 @@ This repository also includes a published ESLint configuration package for React
 
 **[@10xscale/eslint-modern](https://www.npmjs.com/package/@10xscale/eslint-modern)** - A shareable ESLint configuration for React projects, designed to enforce consistent code style and best practices across your codebase. Built for use with ESLint v9+ Flat Config.
 
-See the [package README](./package/README.md) for installation and usage instructions.
+See the [package README](https://github.com/10xHub/react-style-guide/blob/main/package/README.md) for installation and usage instructions.
 
 ## 📚 Guide Collection
 
@@ -32,23 +36,23 @@ See the [package README](./package/README.md) for installation and usage instruc
 
 | Guide | Description | Key Topics |
 |-------|-------------|------------|
-| **[JavaScript Guide](./JAVASCRIPT_GUIDE.md)** | Modern JavaScript patterns and best practices | ES2024, async/await, modules, error handling |
-| **[React Guide](./REACT_GUIDE.md)** | React 19+ patterns and component architecture | Hooks, components, state management, performance |
-| **[SOLID Principles](./SOLID_PRINCIPLES.md)** | SOLID principles applied to React development | Component design, maintainability, architecture |
-| **[Custom Hooks Guide](./CUSTOM_HOOKS_GUIDE.md)** | Hook design patterns and best practices | Hook composition, testing, performance |
+| **[JavaScript Guide](./guidelines/JAVASCRIPT_GUIDE.md)** | Modern JavaScript patterns and best practices | ES2024, async/await, modules, error handling |
+| **[React Guide](./guidelines/REACT_GUIDE.md)** | React 19+ patterns and component architecture | Hooks, components, state management, performance |
+| **[SOLID Principles](./guidelines/SOLID_PRINCIPLES.md)** | SOLID principles applied to React development | Component design, maintainability, architecture |
+| **[Custom Hooks Guide](./guidelines/CUSTOM_HOOKS_GUIDE.md)** | Hook design patterns and best practices | Hook composition, testing, performance |
 
 ### Configuration & Setup
 
 | Guide | Description | Key Topics |
 |-------|-------------|------------|
-| **[File Organization](./FILE_ORGANIZATION.md)** | Project structure and naming conventions | Folder structure, imports, code splitting |
-| **[Testing Guide](./TESTING_GUIDE.md)** | Comprehensive testing with Vitest | Component testing, hooks, integration |
+| **[File Organization](./guidelines/FILE_ORGANIZATION.md)** | Project structure and naming conventions | Folder structure, imports, code splitting |
+| **[Testing Guide](./guidelines/TESTING_GUIDE.md)** | Comprehensive testing with Vitest | Component testing, hooks, integration |
 
 ### Optimization & Migration
 
 | Guide | Description | Key Topics |
 |-------|-------------|------------|
-| **[Performance Guide](./PERFORMANCE_GUIDE.md)** | React performance optimization techniques | Bundle optimization, memory management, monitoring |
+| **[Performance Guide](./guidelines/PERFORMANCE_GUIDE.md)** | React performance optimization techniques | Bundle optimization, memory management, monitoring |
 
 ## 🎯 Quick Start
 
@@ -82,7 +86,7 @@ See the [package README](./package/README.md) for detailed installation and usag
 
 ### 3. Set Up Testing
 
-Follow the [Testing Guide](./TESTING_GUIDE.md) to configure Vitest:
+Follow the [Testing Guide](./guidelines/TESTING_GUIDE.md) to configure Vitest:
 
 ```bash
 # Install testing dependencies
@@ -91,7 +95,7 @@ npm install --save-dev vitest @testing-library/jest-dom @testing-library/user-ev
 
 ### 4. Organize Project Structure
 
-Use the [File Organization Guide](./FILE_ORGANIZATION.md) to structure your project:
+Use the [File Organization Guide](./guidelines/FILE_ORGANIZATION.md) to structure your project:
 
 ```
 src/
@@ -346,7 +350,7 @@ getTTFB(console.log);
 ## 🎯 Migration Path
 
 ### From Airbnb Configuration
-1. **Update ESLint Config** - Follow [ESLint Configuration Guide](./ESLINT_CONFIG.md)
+1. **Update ESLint Config** - Follow [ESLint Configuration Guide](./guidelines/ESLINT_CONFIG.md)
 2. **Convert Class Components** - Use [Migration Guide](./MIGRATION_GUIDE.md)
 3. **Modernize Patterns** - Apply [React Guide](./REACT_GUIDE.md) patterns
 4. **Optimize Performance** - Implement [Performance Guide](./PERFORMANCE_GUIDE.md) techniques

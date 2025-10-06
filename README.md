@@ -6,6 +6,8 @@
 
 This repository contains a complete set of development guides for modern React applications, focusing on JavaScript patterns, performance optimization, and maintainable code architecture. Built for teams transitioning from traditional setups to modern React development.
 
+📖 **Read the full documentation online**: [https://10xhub.github.io/react-style-guide/](https://10xhub.github.io/react-style-guide/)
+
 ## 📦 ESLint Configuration Package
 
 This repository also includes a published ESLint configuration package for React projects:
