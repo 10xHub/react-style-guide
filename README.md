@@ -58,13 +58,17 @@ npm install --save-dev eslint vitest @testing-library/react
 
 ### 2. Configure ESLint
 
-Follow the [ESLint Configuration Guide](./guidelines/ESLINT_CONFIG.md) to set up modern linting rules:
+Install the published ESLint configuration package:
 
 ```bash
-# Install ESLint dependencies
-npm install --save-dev eslint-config-airbnb eslint-plugin-react-hooks
-npm install --save-dev eslint-plugin-unicorn eslint-plugin-sonarjs
+# Install the complete ESLint config package
+npm install --save-dev @10xscale/eslint-modern
+
+# Or install with all peer dependencies at once
+npm install --save-dev @10xscale/eslint-modern @babel/eslint-parser @eslint/eslintrc @eslint/js eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-sonarjs eslint-plugin-unicorn eslint-import-resolver-alias eslint-plugin-jsdoc
 ```
+
+See the [package README](./package/README.md) for detailed installation and usage instructions.
 
 ### 3. Set Up Testing
 
@@ -265,7 +269,6 @@ npm install axios date-fns
 npm install --save-dev vite @vitejs/plugin-react
 
 # Linting and formatting
-npm install --save-dev eslint eslint-config-airbnb
 npm install --save-dev eslint-plugin-react eslint-plugin-react-hooks
 npm install --save-dev prettier
 
