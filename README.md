@@ -20,25 +20,25 @@ See the [package README](./package/README.md) for installation and usage instruc
 
 | Guide | Description | Key Topics |
 |-------|-------------|------------|
-| **[JavaScript Guide](./guidelines/JAVASCRIPT_GUIDE.md)** | Modern JavaScript patterns and best practices | ES2024, async/await, modules, error handling |
-| **[React Guide](./guidelines/REACT_GUIDE.md)** | React 19+ patterns and component architecture | Hooks, components, state management, performance |
-| **[SOLID Principles](./guidelines/SOLID_PRINCIPLES.md)** | SOLID principles applied to React development | Component design, maintainability, architecture |
-| **[Custom Hooks Guide](./guidelines/CUSTOM_HOOKS_GUIDE.md)** | Hook design patterns and best practices | Hook composition, testing, performance |
+| **[JavaScript Guide](./docs/guidelines/JAVASCRIPT_GUIDE.md)** | Modern JavaScript patterns and best practices | ES2024, async/await, modules, error handling |
+| **[React Guide](./docs/guidelines/REACT_GUIDE.md)** | React 19+ patterns and component architecture | Hooks, components, state management, performance |
+| **[SOLID Principles](./docs/guidelines/SOLID_PRINCIPLES.md)** | SOLID principles applied to React development | Component design, maintainability, architecture |
+| **[Custom Hooks Guide](./docs/guidelines/CUSTOM_HOOKS_GUIDE.md)** | Hook design patterns and best practices | Hook composition, testing, performance |
 
 ### Configuration & Setup
 
 | Guide | Description | Key Topics |
 |-------|-------------|------------|
-| **[File Organization](./guidelines/FILE_ORGANIZATION.md)** | Project structure and naming conventions | Folder structure, imports, code splitting |
-| **[ESLint Configuration](./guidelines/ESLINT_CONFIG.md)** | Modern ESLint setup extending Airbnb | Rules, IDE integration, CI/CD |
-| **[Testing Guide](./guidelines/TESTING_GUIDE.md)** | Comprehensive testing with Vitest | Component testing, hooks, integration |
+| **[File Organization](./docs/guidelines/FILE_ORGANIZATION.md)** | Project structure and naming conventions | Folder structure, imports, code splitting |
+| **[ESLint Configuration](./docs/guidelines/ESLINT_CONFIG.md)** | Modern ESLint setup extending Airbnb | Rules, IDE integration, CI/CD |
+| **[Testing Guide](./docs/guidelines/TESTING_GUIDE.md)** | Comprehensive testing with Vitest | Component testing, hooks, integration |
 
 ### Optimization & Migration
 
 | Guide | Description | Key Topics |
 |-------|-------------|------------|
-| **[Performance Guide](./guidelines/PERFORMANCE_GUIDE.md)** | React performance optimization techniques | Bundle optimization, memory management, monitoring |
-| **[Migration Guide](./guidelines/MIGRATION_GUIDE.md)** | Migrating from legacy patterns and Airbnb config | Step-by-step migration, code transformation |
+| **[Performance Guide](./docs/guidelines/PERFORMANCE_GUIDE.md)** | React performance optimization techniques | Bundle optimization, memory management, monitoring |
+| **[Migration Guide](./docs/guidelines/MIGRATION_GUIDE.md)** | Migrating from legacy patterns and Airbnb config | Step-by-step migration, code transformation |
 
 ## 🎯 Quick Start
 
@@ -72,7 +72,7 @@ See the [package README](./package/README.md) for detailed installation and usag
 
 ### 3. Set Up Testing
 
-Follow the [Testing Guide](./guidelines/TESTING_GUIDE.md) to configure Vitest:
+Follow the [Testing Guide](./docs/guidelines/TESTING_GUIDE.md) to configure Vitest:
 
 ```bash
 # Install testing dependencies
@@ -81,7 +81,7 @@ npm install --save-dev vitest @testing-library/jest-dom @testing-library/user-ev
 
 ### 4. Organize Project Structure
 
-Use the [File Organization Guide](./guidelines/FILE_ORGANIZATION.md) to structure your project:
+Use the [File Organization Guide](./docs/guidelines/FILE_ORGANIZATION.md) to structure your project:
 
 ```
 src/
@@ -336,15 +336,15 @@ getTTFB(console.log);
 ## 🎯 Migration Path
 
 ### From Airbnb Configuration
-1. **Update ESLint Config** - Follow [ESLint Configuration Guide](./guidelines/ESLINT_CONFIG.md)
-2. **Convert Class Components** - Use [Migration Guide](./guidelines/MIGRATION_GUIDE.md)
-3. **Modernize Patterns** - Apply [React Guide](./guidelines/REACT_GUIDE.md) patterns
-4. **Optimize Performance** - Implement [Performance Guide](./guidelines/PERFORMANCE_GUIDE.md) techniques
+1. **Update ESLint Config** - Follow [ESLint Configuration Guide](./docs/guidelines/ESLINT_CONFIG.md)
+2. **Convert Class Components** - Use [Migration Guide](./docs/guidelines/MIGRATION_GUIDE.md)
+3. **Modernize Patterns** - Apply [React Guide](./docs/guidelines/REACT_GUIDE.md) patterns
+4. **Optimize Performance** - Implement [Performance Guide](./docs/guidelines/PERFORMANCE_GUIDE.md) techniques
 
 ### From Create React App
-1. **Migrate to Vite** - Follow build tool migration in [Migration Guide](./guidelines/MIGRATION_GUIDE.md)
+1. **Migrate to Vite** - Follow build tool migration in [Migration Guide](./docs/guidelines/MIGRATION_GUIDE.md)
 2. **Update Testing** - Switch from Jest to Vitest
-3. **Reorganize Structure** - Apply [File Organization Guide](./guidelines/FILE_ORGANIZATION.md)
+3. **Reorganize Structure** - Apply [File Organization Guide](./docs/guidelines/FILE_ORGANIZATION.md)
 4. **Optimize Bundle** - Implement code splitting and optimization
 
 ## 🤝 Contributing
