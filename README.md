@@ -6,31 +6,39 @@
 
 This repository contains a complete set of development guides for modern React applications, focusing on JavaScript patterns, performance optimization, and maintainable code architecture. Built for teams transitioning from traditional setups to modern React development.
 
+## 📦 ESLint Configuration Package
+
+This repository also includes a published ESLint configuration package for React projects:
+
+**[@10xscale/eslint-modern](https://www.npmjs.com/package/@10xscale/eslint-modern)** - A shareable ESLint configuration for React projects, designed to enforce consistent code style and best practices across your codebase. Built for use with ESLint v9+ Flat Config.
+
+See the [package README](./package/README.md) for installation and usage instructions.
+
 ## 📚 Guide Collection
 
 ### Core Development Guides
 
 | Guide | Description | Key Topics |
 |-------|-------------|------------|
-| **[JavaScript Guide](./JAVASCRIPT_GUIDE.md)** | Modern JavaScript patterns and best practices | ES2024, async/await, modules, error handling |
-| **[React Guide](./REACT_GUIDE.md)** | React 19+ patterns and component architecture | Hooks, components, state management, performance |
-| **[SOLID Principles](./SOLID_PRINCIPLES.md)** | SOLID principles applied to React development | Component design, maintainability, architecture |
-| **[Custom Hooks Guide](./CUSTOM_HOOKS_GUIDE.md)** | Hook design patterns and best practices | Hook composition, testing, performance |
+| **[JavaScript Guide](./guidelines/JAVASCRIPT_GUIDE.md)** | Modern JavaScript patterns and best practices | ES2024, async/await, modules, error handling |
+| **[React Guide](./guidelines/REACT_GUIDE.md)** | React 19+ patterns and component architecture | Hooks, components, state management, performance |
+| **[SOLID Principles](./guidelines/SOLID_PRINCIPLES.md)** | SOLID principles applied to React development | Component design, maintainability, architecture |
+| **[Custom Hooks Guide](./guidelines/CUSTOM_HOOKS_GUIDE.md)** | Hook design patterns and best practices | Hook composition, testing, performance |
 
 ### Configuration & Setup
 
 | Guide | Description | Key Topics |
 |-------|-------------|------------|
-| **[File Organization](./FILE_ORGANIZATION.md)** | Project structure and naming conventions | Folder structure, imports, code splitting |
-| **[ESLint Configuration](./ESLINT_CONFIG.md)** | Modern ESLint setup extending Airbnb | Rules, IDE integration, CI/CD |
-| **[Testing Guide](./TESTING_GUIDE.md)** | Comprehensive testing with Vitest | Component testing, hooks, integration |
+| **[File Organization](./guidelines/FILE_ORGANIZATION.md)** | Project structure and naming conventions | Folder structure, imports, code splitting |
+| **[ESLint Configuration](./guidelines/ESLINT_CONFIG.md)** | Modern ESLint setup extending Airbnb | Rules, IDE integration, CI/CD |
+| **[Testing Guide](./guidelines/TESTING_GUIDE.md)** | Comprehensive testing with Vitest | Component testing, hooks, integration |
 
 ### Optimization & Migration
 
 | Guide | Description | Key Topics |
 |-------|-------------|------------|
-| **[Performance Guide](./PERFORMANCE_GUIDE.md)** | React performance optimization techniques | Bundle optimization, memory management, monitoring |
-| **[Migration Guide](./MIGRATION_GUIDE.md)** | Migrating from legacy patterns and Airbnb config | Step-by-step migration, code transformation |
+| **[Performance Guide](./guidelines/PERFORMANCE_GUIDE.md)** | React performance optimization techniques | Bundle optimization, memory management, monitoring |
+| **[Migration Guide](./guidelines/MIGRATION_GUIDE.md)** | Migrating from legacy patterns and Airbnb config | Step-by-step migration, code transformation |
 
 ## 🎯 Quick Start
 
@@ -50,7 +58,7 @@ npm install --save-dev eslint vitest @testing-library/react
 
 ### 2. Configure ESLint
 
-Follow the [ESLint Configuration Guide](./ESLINT_CONFIG.md) to set up modern linting rules:
+Follow the [ESLint Configuration Guide](./guidelines/ESLINT_CONFIG.md) to set up modern linting rules:
 
 ```bash
 # Install ESLint dependencies
@@ -60,7 +68,7 @@ npm install --save-dev eslint-plugin-unicorn eslint-plugin-sonarjs
 
 ### 3. Set Up Testing
 
-Follow the [Testing Guide](./TESTING_GUIDE.md) to configure Vitest:
+Follow the [Testing Guide](./guidelines/TESTING_GUIDE.md) to configure Vitest:
 
 ```bash
 # Install testing dependencies
@@ -69,7 +77,7 @@ npm install --save-dev vitest @testing-library/jest-dom @testing-library/user-ev
 
 ### 4. Organize Project Structure
 
-Use the [File Organization Guide](./FILE_ORGANIZATION.md) to structure your project:
+Use the [File Organization Guide](./guidelines/FILE_ORGANIZATION.md) to structure your project:
 
 ```
 src/
@@ -325,15 +333,15 @@ getTTFB(console.log);
 ## 🎯 Migration Path
 
 ### From Airbnb Configuration
-1. **Update ESLint Config** - Follow [ESLint Configuration Guide](./ESLINT_CONFIG.md)
-2. **Convert Class Components** - Use [Migration Guide](./MIGRATION_GUIDE.md)
-3. **Modernize Patterns** - Apply [React Guide](./REACT_GUIDE.md) patterns
-4. **Optimize Performance** - Implement [Performance Guide](./PERFORMANCE_GUIDE.md) techniques
+1. **Update ESLint Config** - Follow [ESLint Configuration Guide](./guidelines/ESLINT_CONFIG.md)
+2. **Convert Class Components** - Use [Migration Guide](./guidelines/MIGRATION_GUIDE.md)
+3. **Modernize Patterns** - Apply [React Guide](./guidelines/REACT_GUIDE.md) patterns
+4. **Optimize Performance** - Implement [Performance Guide](./guidelines/PERFORMANCE_GUIDE.md) techniques
 
 ### From Create React App
-1. **Migrate to Vite** - Follow build tool migration in [Migration Guide](./MIGRATION_GUIDE.md)
+1. **Migrate to Vite** - Follow build tool migration in [Migration Guide](./guidelines/MIGRATION_GUIDE.md)
 2. **Update Testing** - Switch from Jest to Vitest
-3. **Reorganize Structure** - Apply [File Organization Guide](./FILE_ORGANIZATION.md)
+3. **Reorganize Structure** - Apply [File Organization Guide](./guidelines/FILE_ORGANIZATION.md)
 4. **Optimize Bundle** - Implement code splitting and optimization
 
 ## 🤝 Contributing
@@ -378,3 +386,74 @@ This guide collection is available under the MIT License. Feel free to use, modi
 **Built for modern React development** 🚀
 
 For specific implementation details, dive into the individual guides. Each guide is designed to be comprehensive yet practical, with real-world examples and clear migration paths from legacy patterns.
+
+## Installation
+
+Install the package:
+
+```sh
+# Using npm
+npm install --save-dev @10xscale/eslint-modern
+
+npm install --save-dev eslint-import-resolver-alias
+
+# Using yarn
+yarn add --dev @10xscale/eslint-modern
+
+# Using pnpm
+pnpm add -D @10xscale/eslint-modern
+```
+
+Install the package and all required peer dependencies:
+
+```sh
+# Using npm
+npm install --save-dev @10xscale/eslint-modern @babel/eslint-parser @eslint/eslintrc @eslint/js eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-sonarjs eslint-plugin-unicorn eslint-import-resolver-alias eslint-plugin-jsdoc
+
+# Using yarn
+yarn add --dev @10xscale/eslint-modern @babel/eslint-parser @eslint/eslintrc @eslint/js eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-sonarjs eslint-plugin-unicorn eslint-import-resolver-alias eslint-plugin-jsdoc
+
+
+# Using pnpm
+pnpm add -D @10xscale/eslint-modern @babel/eslint-parser @eslint/eslintrc @eslint/js eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-plugin-promise eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-sonarjs eslint-plugin-unicorn eslint-import-resolver-alias eslint-plugin-jsdoc
+```
+
+> **Note:** You must also install all listed peer dependencies. Check the `peerDependencies` section in [`package.json`](./package.json) for the required versions.
+
+## Usage (ESLint v9+ Flat Config)
+
+> **Important:** This config is published as an ES module. You must set "type": "module" in your project's `package.json` to use it, or use the `.mjs` extension for your ESLint config file.
+
+### 1. Enable ES Modules in your project
+
+Add this to your `package.json`:
+
+```json
+{
+  "type": "module"
+}
+```
+
+### 2. Create an `eslint.config.js` (or `.mjs`) file in your project root:
+
+```js
+// eslint.config.js
+import config from '@10xscale/eslint-modern';
+
+export default [
+  ...config,
+  // Add your custom rules or overrides here
+];
+```
+
+If you cannot use `type: "module"`, rename your config to `eslint.config.mjs` and use the same import/export syntax.
+
+## Updating Peer Dependencies
+
+When updating this package, always ensure your project's peer dependencies match the versions specified in [`package.json`](./package.json). Update them as needed to avoid version conflicts.
+
+## Contributing & Contact
+
+Contributions, issues, and suggestions are welcome! Please open an issue or pull request on the repository.
+
+For questions or support, contact the maintainers via the repository's issue tracker.

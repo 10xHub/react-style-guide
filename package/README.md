@@ -1,4 +1,4 @@
-# @10xScale/eslint-config
+# @10xscale/eslint-modern
 
 A shareable ESLint configuration for React projects, designed to enforce consistent code style and best practices across your codebase. Built for use with ESLint v9+ Flat Config.
 
