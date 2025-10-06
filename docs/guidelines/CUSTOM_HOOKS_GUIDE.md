@@ -1201,6 +1201,7 @@ const RegistrationForm = () => {
   const CurrentStepComponent = multiStepForm.currentStepData;
   
   return (
+    {% raw %}
     <div className="multi-step-form">
       <div className="progress-bar">
         <div 
@@ -1233,6 +1234,7 @@ const RegistrationForm = () => {
         isLastStep={multiStepForm.isLastStep}
       />
     </div>
+    {% endraw %}
   );
 };
 ```

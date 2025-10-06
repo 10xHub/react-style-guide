@@ -427,7 +427,7 @@ const TodoList = () => {
           <li key={todo.id}>
             <span 
               onClick={() => toggleTodo(todo.id)}
-              style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}
+              style={% raw %}{{ textDecoration: todo.completed ? 'line-through' : 'none' }}{% endraw %}
             >
               {todo.text}
             </span>
@@ -1352,7 +1352,7 @@ class ErrorBoundary extends Component {
       return (
         <div className="error-boundary">
           <h2>Something went wrong</h2>
-          <details style={{ whiteSpace: 'pre-wrap' }}>
+          <details style={% raw %}{{ whiteSpace: 'pre-wrap' }}{% endraw %}>
             {this.state.error && this.state.error.toString()}
             <br />
             {this.state.errorInfoStack}

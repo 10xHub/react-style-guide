@@ -86,6 +86,7 @@ export const adminApi = {
 **Derived modules/components should be substitutable for their base.**
 
 ```javascript
+{% raw %}
 // src/components/buttons/BaseButton.jsx
 export const BaseButton = ({ children, ...props }) => (
   <button {...props}>{children}</button>
@@ -99,6 +100,7 @@ export const PrimaryButton = (props) => (
 );
 
 // Usage: <PrimaryButton onClick={...}>Save</PrimaryButton>
+{% endraw %}
 ```
 
 ---

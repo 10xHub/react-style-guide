@@ -788,6 +788,7 @@ const PostDisplay = ({ postId }) => (
 
 ### ❌ Fat Interface (Violating ISP)
 
+{% raw %}
 ```jsx
 // Bad: Monolithic prop interface
 const UserComponent = ({
@@ -855,6 +856,7 @@ const UserComponent = ({
   );
 };
 ```
+{% endraw %}
 
 ### ✅ Segregated Interfaces
 
@@ -1291,7 +1293,7 @@ const TestApp = () => {
   };
   
   return (
-    <ServiceContext.Provider value={{ userService: mockUserService }}>
+    <ServiceContext.Provider value={% raw %}{{ userService: mockUserService }}{% endraw %}>
       <UserList />
     </ServiceContext.Provider>
   );
@@ -1564,8 +1566,8 @@ const App = () => {
   const [theme, setTheme] = useState('light');
   
   return (
-    <UserContext.Provider value={{ user, setUser }}>
-      <ThemeContext.Provider value={{ theme, setTheme }}>
+    <UserContext.Provider value={% raw %}{{ user, setUser }}{% endraw %}>
+      <ThemeContext.Provider value={% raw %}{{ theme, setTheme }}{% endraw %}>
         <Layout>
           <Dashboard />
         </Layout>
