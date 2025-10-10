@@ -4,6 +4,7 @@
   "description": "Modern React & JavaScript ESLint config (ESLint v9+ Flat Config) by 10xScale.",
   "main": "index.js",
   "license": "MIT",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/10XScale-in/react-style-guide"

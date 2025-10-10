@@ -221,7 +221,7 @@ export default [
             "unicorn/filename-case": [
                 "error",
                 {
-                    cases: { camelCase: true, pascalCase: true },
+                    cases: { camelCase: true, pascalCase: true, snakeCase: true },
                     ignore: [
                         /^[A-Z]+\..*$/, // Allow README.md, LICENSE, etc.
                         /.*\\.jsx?$/,
@@ -287,26 +287,6 @@ export default [
             "jsdoc/require-param": "off",
         },
         settings: {
-            "import/resolver": {
-                alias: {
-                    map: [
-                        ["@", path.resolve(__dirname, "./src")],
-                        ["@hooks", path.resolve(__dirname, "./src/hooks")],
-                        ["@lib", path.resolve(__dirname, "./src/lib")],
-                        ["@context", path.resolve(__dirname, "./src/lib/context")],
-                        ["@pages", path.resolve(__dirname, "./src/pages")],
-                        ["@constants", path.resolve(__dirname, "./src/lib/constants")],
-                        ["@api", path.resolve(__dirname, "./src/services/api")],
-                        ["@query", path.resolve(__dirname, "./src/services/query")],
-                        ["@store", path.resolve(__dirname, "./src/services/store")],
-                        ["@public", path.resolve(__dirname, "./public")],
-                    ],
-                    extensions: [".js", ".jsx"],
-                },
-                node: {
-                    extensions: [".js", ".jsx"],
-                },
-            },
             react: {
                 pragma: "React",
                 version: "detect",
@@ -341,7 +321,7 @@ export default [
             "unicorn/filename-case": [
                 "error",
                 {
-                    cases: { pascalCase: true },
+                    cases: { kebabCase: true },
                     ignore: [/^index\.jsx$/, /^App\.jsx$/, /^main\.jsx$/, /^setupTests\.jsx$/, /^.*\.test\.jsx$/],
                 },
             ],
@@ -353,7 +333,7 @@ export default [
             "unicorn/filename-case": [
                 "error",
                 {
-                    cases: { camelCase: true },
+                    cases: { kebabCase: true },
                 },
             ],
         },
