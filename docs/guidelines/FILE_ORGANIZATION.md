@@ -1,6 +1,6 @@
-# File Organization Guide
+# File Organization Guide - Kebab-Case Version
 
-> Project structure standards, file naming conventions, and organization patterns
+> Project structure standards with kebab-case file naming conventions and organization patterns
 
 ## Table of Contents
 
@@ -57,20 +57,20 @@ Use specific keywords before file extensions to categorize files:
 - **`util`** - Utility functions
 - **`type`** - TypeScript type definitions
 
-### Naming Examples
+### Naming Examples (Kebab-Case)
 
 ```javascript
 // React Components
-UserProfile.jsx
-NavigationMenu.jsx
-ProductCard.jsx
-AuthLoginForm.jsx
+user-profile.jsx
+navigation-menu.jsx
+product-card.jsx
+auth-login-form.jsx
 
 // Custom Hooks
-useUserData.hook.js
-useAuthState.hook.js
-useShoppingCart.hook.js
-useLocalStorage.hook.js
+use-user-data.hook.js
+use-auth-state.hook.js
+use-shopping-cart.hook.js
+use-local-storage.hook.js
 
 // API Services
 user.api.js
@@ -97,14 +97,14 @@ constants.util.js
 helpers.util.js
 
 // Test Files
-UserProfile.test.jsx
-useUserData.test.js
+user-profile.test.jsx
+use-user-data.test.js
 user.api.test.js
 validators.test.js
 
 // Storybook Stories
-Button.story.jsx
-UserCard.stories.jsx
+button.story.jsx
+user-card.stories.jsx
 ```
 
 ### Directory Naming
@@ -130,39 +130,39 @@ order-management/
 ```
 src/components/
 ├── ui/                        # Base UI components (ShadCN/UI)
-│   ├── Button.jsx
-│   ├── Input.jsx
-│   ├── Card.jsx
-│   ├── Modal.jsx
+│   ├── button.jsx
+│   ├── input.jsx
+│   ├── card.jsx
+│   ├── modal.jsx
 │   └── index.js              # Barrel exports
 ├── layout/                   # Layout components
-│   ├── Header.jsx
-│   ├── Sidebar.jsx
-│   ├── Footer.jsx
-│   ├── MainLayout.jsx
+│   ├── header.jsx
+│   ├── sidebar.jsx
+│   ├── footer.jsx
+│   ├── main-layout.jsx
 │   └── index.js
 ├── forms/                    # Form-related components
-│   ├── UserForm.jsx
-│   ├── LoginForm.jsx
-│   ├── ContactForm.jsx
+│   ├── user-form.jsx
+│   ├── login-form.jsx
+│   ├── contact-form.jsx
 │   └── index.js
 ├── features/                 # Feature-specific components
 │   ├── auth/
-│   │   ├── LoginButton.jsx
-│   │   ├── AuthGuard.jsx
+│   │   ├── login-button.jsx
+│   │   ├── auth-guard.jsx
 │   │   └── index.js
 │   ├── dashboard/
-│   │   ├── StatsWidget.jsx
-│   │   ├── RecentActivity.jsx
+│   │   ├── stats-widget.jsx
+│   │   ├── recent-activity.jsx
 │   │   └── index.js
 │   └── user-profile/
-│       ├── ProfileCard.jsx
-│       ├── AvatarUpload.jsx
+│       ├── profile-card.jsx
+│       ├── avatar-upload.jsx
 │       └── index.js
 └── common/                   # Commonly used components
-    ├── LoadingSpinner.jsx
-    ├── ErrorBoundary.jsx
-    ├── NotFound.jsx
+    ├── loading-spinner.jsx
+    ├── error-boundary.jsx
+    ├── not-found.jsx
     └── index.js
 ```
 
@@ -176,29 +176,29 @@ src/lib/
 │   ├── app.constants.js     # App-wide constants
 │   └── index.js
 ├── context/                 # React Context providers
-│   ├── AuthContext.js
-│   ├── ThemeContext.js
-│   ├── UserContext.js
+│   ├── auth-context.js
+│   ├── theme-context.js
+│   ├── user-context.js
 │   └── index.js
 ├── hooks/                   # Custom hooks organized by purpose
 │   ├── data/               # Data fetching hooks
-│   │   ├── useUserData.hook.js
-│   │   ├── useApiRequest.hook.js
+│   │   ├── use-user-data.hook.js
+│   │   ├── use-api-request.hook.js
 │   │   └── index.js
 │   ├── ui/                 # UI state hooks
-│   │   ├── useToggle.hook.js
-│   │   ├── useModal.hook.js
-│   │   ├── useDebounce.hook.js
+│   │   ├── use-toggle.hook.js
+│   │   ├── use-modal.hook.js
+│   │   ├── use-debounce.hook.js
 │   │   └── index.js
 │   ├── business/           # Business logic hooks
-│   │   ├── useAuth.hook.js
-│   │   ├── usePermissions.hook.js
-│   │   ├── useShoppingCart.hook.js
+│   │   ├── use-auth.hook.js
+│   │   ├── use-permissions.hook.js
+│   │   ├── use-shopping-cart.hook.js
 │   │   └── index.js
 │   └── effects/            # Effect-based hooks
-│       ├── useEventListener.hook.js
-│       ├── useClickOutside.hook.js
-│       ├── useInterval.hook.js
+│       ├── use-event-listener.hook.js
+│       ├── use-click-outside.hook.js
+│       ├── use-interval.hook.js
 │       └── index.js
 └── utils/                  # Utility functions
     ├── validators.util.js  # Input validation functions
@@ -214,26 +214,26 @@ src/lib/
 ```
 src/pages/
 ├── auth/                    # Authentication pages
-│   ├── Login.jsx
-│   ├── Register.jsx
-│   ├── ForgotPassword.jsx
-│   ├── ResetPassword.jsx
+│   ├── login.jsx
+│   ├── register.jsx
+│   ├── forgot-password.jsx
+│   ├── reset-password.jsx
 │   └── index.js
 ├── dashboard/               # Dashboard pages
-│   ├── Dashboard.jsx
-│   ├── Analytics.jsx
-│   ├── Reports.jsx
+│   ├── dashboard.jsx
+│   ├── analytics.jsx
+│   ├── reports.jsx
 │   └── index.js
 ├── user-profile/           # User profile pages
-│   ├── Profile.jsx
-│   ├── Settings.jsx
-│   ├── Preferences.jsx
+│   ├── profile.jsx
+│   ├── settings.jsx
+│   ├── preferences.jsx
 │   └── index.js
 ├── misc/                   # Miscellaneous pages
-│   ├── NotFound.jsx
-│   ├── Unauthorized.jsx
-│   ├── ServerError.jsx
-│   ├── Maintenance.jsx
+│   ├── not-found.jsx
+│   ├── unauthorized.jsx
+│   ├── server-error.jsx
+│   ├── maintenance.jsx
 │   └── index.js
 └── index.js                # All page exports
 ```
@@ -276,7 +276,7 @@ src/services/
 ### Single Component File Structure
 
 ```jsx
-// UserProfile.jsx
+// user-profile.jsx
 
 // 1. External imports
 import React, { useState, useEffect, useCallback } from 'react';
@@ -296,7 +296,7 @@ import { useUserData } from '../../lib/hooks/data';
 import { usePermissions } from '../../lib/hooks/business';
 
 // 5. Styles (if using CSS modules)
-import styles from './UserProfile.module.css';
+import styles from './user-profile.module.css';
 
 // 6. Component definition
 const UserProfile = ({ 
@@ -398,21 +398,21 @@ export default UserProfile;
 ```
 src/components/features/user-management/
 ├── components/              # Feature-specific components
-│   ├── UserList.jsx
-│   ├── UserCard.jsx
-│   ├── UserForm.jsx
-│   ├── UserFilters.jsx
+│   ├── user-list.jsx
+│   ├── user-card.jsx
+│   ├── user-form.jsx
+│   ├── user-filters.jsx
 │   └── index.js
 ├── hooks/                  # Feature-specific hooks
-│   ├── useUserManagement.hook.js
-│   ├── useUserFilters.hook.js
+│   ├── use-user-management.hook.js
+│   ├── use-user-filters.hook.js
 │   └── index.js
 ├── utils/                  # Feature-specific utilities
-│   ├── userValidators.util.js
-│   ├── userFormatters.util.js
+│   ├── user-validators.util.js
+│   ├── user-formatters.util.js
 │   └── index.js
 ├── constants/              # Feature-specific constants
-│   ├── userRoles.constants.js
+│   ├── user-roles.constants.js
 │   └── index.js
 └── index.js               # Feature barrel export
 ```
@@ -704,12 +704,12 @@ src/assets/
 │       └── placeholder.svg
 ├── fonts/                  # Custom fonts
 │   ├── inter/
-│   │   ├── Inter-Regular.woff2
-│   │   ├── Inter-Medium.woff2
-│   │   └── Inter-Bold.woff2
+│   │   ├── inter-regular.woff2
+│   │   ├── inter-medium.woff2
+│   │   └── inter-bold.woff2
 │   └── roboto/
-│       ├── Roboto-Regular.woff2
-│       └── Roboto-Bold.woff2
+│       ├── roboto-regular.woff2
+│       └── roboto-bold.woff2
 ├── styles/                 # Global styles
 │   ├── globals.css
 │   ├── variables.css
@@ -753,11 +753,11 @@ export const getIconUrl = (iconName) => {
 
 ```javascript
 // src/components/ui/index.js
-export { default as Button } from './Button';
-export { default as Input } from './Input';
-export { default as Card } from './Card';
-export { default as Modal } from './Modal';
-export { default as Avatar } from './Avatar';
+export { default as Button } from './button';
+export { default as Input } from './input';
+export { default as Card } from './card';
+export { default as Modal } from './modal';
+export { default as Avatar } from './avatar';
 
 // src/lib/hooks/index.js
 // Data hooks
@@ -814,17 +814,17 @@ import { useUserQuery } from '../../services/query';
 ### Route-based Splitting
 
 ```javascript
-// src/route/main.routes.jsx
+// src/route/main-routes.jsx
 import { lazy } from 'react';
 
 // Lazy load page components
-const Dashboard = lazy(() => import('../pages/dashboard/Dashboard'));
-const UserProfile = lazy(() => import('../pages/user-profile/Profile'));
-const Settings = lazy(() => import('../pages/user-profile/Settings'));
+const Dashboard = lazy(() => import('../pages/dashboard/dashboard'));
+const UserProfile = lazy(() => import('../pages/user-profile/profile'));
+const Settings = lazy(() => import('../pages/user-profile/settings'));
 
 // Admin pages with longer loading
 const AdminPanel = lazy(() => 
-  import('../pages/admin/AdminPanel').then(module => ({
+  import('../pages/admin/admin-panel').then(module => ({
     default: module.AdminPanel
   }))
 );
@@ -833,22 +833,22 @@ export const mainRoutes = [
   {
     path: '/dashboard',
     element: <Dashboard />,
-    preload: () => import('../pages/dashboard/Dashboard')
+    preload: () => import('../pages/dashboard/dashboard')
   },
   {
     path: '/profile',
     element: <UserProfile />,
-    preload: () => import('../pages/user-profile/Profile')
+    preload: () => import('../pages/user-profile/profile')
   },
   {
     path: '/settings',
     element: <Settings />,
-    preload: () => import('../pages/user-profile/Settings')
+    preload: () => import('../pages/user-profile/settings')
   },
   {
     path: '/admin',
     element: <AdminPanel />,
-    preload: () => import('../pages/admin/AdminPanel')
+    preload: () => import('../pages/admin/admin-panel')
   }
 ];
 ```
@@ -919,5 +919,3 @@ export default defineConfig({
   }
 });
 ```
-
-This file organization guide provides a comprehensive structure for maintaining clean, scalable, and well-organized React projects. The patterns ensure consistency across team members and make the codebase easier to navigate and maintain.
