@@ -9,6 +9,7 @@ import eslint from "@eslint/js"
 
 // Import plugins directly
 import importPlugin from "eslint-plugin-import"
+import preferArrowFunctions from "eslint-plugin-prefer-arrow-functions"
 import jsxA11yPlugin from "eslint-plugin-jsx-a11y"
 import prettierPlugin from "eslint-plugin-prettier"
 import promisePlugin from "eslint-plugin-promise"
@@ -72,7 +73,7 @@ export default [
             "react-hooks": reactHooksPlugin,
             "jsx-a11y": jsxA11yPlugin,
             import: importPlugin,
-            // 'prefer-arrow': preferArrow,
+            'prefer-arrow-functions': preferArrowFunctions,
             unicorn: unicornPlugin,
             sonarjs: sonarjsPlugin,
             // vitest: vitestPlugin,
@@ -86,7 +87,7 @@ export default [
             // JavaScript best practices
             "no-var": "error",
             "prefer-const": "error",
-            // "prefer-arrow-callback": "error",
+            "prefer-arrow-callback": "error",
             "prefer-template": "error",
             "prefer-destructuring": ["error", { array: true, object: true }],
             "object-curly-spacing": ["error", "always"],
@@ -200,10 +201,18 @@ export default [
             "jsx-a11y/no-static-element-interactions": "error",
 
             // Performance
-            // "prefer-arrow/prefer-arrow-functions": [
-            //     "error",
-            //     { disallowPrototype: true, singleReturnOnly: false, classPropertiesAllowed: false },
-            // ],
+            "prefer-arrow-functions/prefer-arrow-functions": [
+                "warn",
+                {
+                    allowedNames: [],
+                    allowNamedFunctions: false,
+                    allowObjectProperties: false,
+                    classPropertiesAllowed: false,
+                    disallowPrototype: false,
+                    returnStyle: 'unchanged',
+                    singleReturnOnly: false,
+                }
+            ],
             "unicorn/prefer-node-protocol": "error",
             "unicorn/prefer-module": "error",
             "unicorn/prefer-optional-catch-binding": "error",
