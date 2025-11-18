@@ -347,4 +347,14 @@ export default [
             ],
         },
     },
+    {
+    files: ["**/*.jsx", "**/*.tsx"],
+    rules: {
+      "max-lines-per-function": [
+        "error",
+        { max: 200, skipBlankLines: true, skipComments: true },
+      ],
+    },
+  },
+    
 ]

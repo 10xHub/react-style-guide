@@ -17,15 +17,15 @@
 
 ```
 project-root/
-├── public/                     # Static files served directly
-│   ├── locales/               # Internationalization files
+├── public/                   # Static files served directly
+│   ├── locales/              # Internationalization files
 │   │   ├── en/
 │   │   ├── es/
 │   │   └── fr/
-│   ├── images/                # Static images
+│   ├── images/               # Static images
 │   ├── favicon.ico
 │   └── index.html
-├── src/                       # Source code
+├── src/                      # Source code
 │   ├── assets/               # Static assets for bundling
 │   ├── components/           # Reusable React components
 │   ├── docs/                 # Documentation files
